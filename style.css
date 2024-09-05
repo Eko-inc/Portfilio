@@ -1,0 +1,335 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: aliceblue;
+}
+
+* img {
+    width: 300px;
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+body {
+    background: url(img/background.jpg);
+    background-size: contain;
+}
+
+header {
+    background-color: rgba(37, 37, 37, 0.418);
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    top: 0;
+    position: sticky;
+    z-index: 10;
+    border-bottom: 3px solid rgba(254, 255, 218, 0.589);
+    animation: appear 1s linear;
+}
+
+header nav {
+    position: relative;
+    margin: 0 0 0 50%;
+}
+
+header nav a {
+    text-decoration: none;
+    margin: 0 5px 0 5px;
+    position: relative;
+}
+
+header nav a::after {
+    content: "";
+    position: absolute;
+    background-color: aliceblue;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -4px;
+}
+
+header nav a:hover::after{
+    width: 100%;
+    transition: all .2s;
+}
+
+section {
+    height: 100vh;
+    background-color: rgba(37, 37, 37, 0.418);
+    backdrop-filter: blur(30px);
+    border-top: 10px solid rgba(15, 15, 15, 0.158);
+    animation: appear 1s linear;
+    scroll-margin: 10vh;
+}
+
+#about {
+    margin: 90vh 0 0 0;
+}
+
+#about h2 {
+    margin: 4vh 0 0 2vh;
+}
+
+#about p {
+    font-size: 20px;
+}
+
+.me {
+    display: flex;
+    margin: 8vh 0 0 20vh;
+    width: 800px;
+}
+
+.me img {
+    margin: 14vh 0 0 20vh;
+    border: 3px solid rgba(15, 15, 15, 0.5);
+    width: 300px;
+    height: 300px;
+}
+
+#about img {
+    width: 200px;
+}
+
+#projects {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#projects div p {
+    margin: 0 0 0 0;
+}
+
+#projects h2 {
+    margin: 7vh 0 0 3vh;
+    text-align: left;
+}
+
+.main-box {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0 0 20vh 0;
+}
+
+#projects img {
+    width: 400px;
+    margin: 0 8px 0 8px;
+    border: 2px solid rgba(15, 15, 15, 0.5);
+}
+
+#projects img:hover {
+    transition: all .2s;
+    transform: scale(1.1);
+}
+
+.box p {
+    font-weight: bold;
+}
+
+#abilities h2 {
+    margin: 7vh 0 0 3vh;
+}
+
+.ability-flex {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 15vh 0 0 0;
+}
+
+.ability-box {
+    margin: 0 20vh 30vh 10vh;
+}
+
+.ability-box p {
+    margin: 16vh 0 16vh 0;
+    position: relative;
+}
+
+.ability-box p::after {
+    content: "";
+    position: absolute;
+    background-color: aliceblue;
+    height: 20px;
+    width: 200%;
+    left: 0;
+    bottom: -40px;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0;
+}
+
+
+.ability-box2 {
+    margin: 0 20vh 30vh 20vh;
+}
+
+.ability-box2 p {
+    margin: 16vh 0 16vh 0;
+    position: relative;
+}
+
+.ability-box2 p::after {
+    content: "";
+    position: absolute;
+    background-color: aliceblue;
+    height: 20px;
+    width: 120%;
+    left: 0;
+    bottom: -40px;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0;
+}
+
+#contacts {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    scroll-margin: -10vh;
+}
+
+#contacts h2, p, div {
+    margin: 20vh 0 0 0;
+}
+
+#contacts input {
+    background-color: rgba(15, 15, 15, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    border: none;
+}
+
+#contacts button {
+    padding: 5px;
+    background-color: rgba(15, 15, 15, 0.733);
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+    border: none;
+}
+
+#contacts button:hover {
+    background-color: rgba(202, 202, 202, 0.548);
+    transition: all .2s;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+footer {
+    padding: 3px 0;
+    background-color: rgba(15, 15, 15, 0.5);
+    backdrop-filter: blur(20px);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+footer p {
+    margin: 0 0 1vh 0;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    } to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    @keyframes slideIn {
+        from {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    section {
+        height: auto;
+        padding: 20px 10px;
+        margin-bottom: 50px;
+    }
+
+    header {
+        text-align: center;
+        animation: slideIn 0.5s ease;
+    }
+
+    header nav {
+        margin: 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    header nav a {
+        margin: 10px 0;
+        font-size: 18px;
+    }
+
+    .me {
+        flex-direction: column;
+        margin: 0;
+        width: 100%;
+        animation: slideIn 1s ease;
+    }
+
+    .me img {
+        width: 150px;
+        height: 150px;
+        margin: 20px auto;
+    }
+
+    .main-box {
+        flex-direction: column;
+        margin: 20px 0;
+        animation: slideIn 1s ease;
+        gap: 20px;
+    }
+
+    #projects img {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .ability-flex {
+        flex-direction: column;
+        animation: slideIn 1s ease;
+        gap: 20px; 
+    }
+
+    .ability-box, .ability-box2 {
+        margin: 0 auto;
+        width: 90%; 
+        text-align: center; 
+    }
+
+    #contacts {
+        margin: 10vh 0;
+    }
+
+    footer {
+        animation: slideIn 0.5s ease;
+    }
+}

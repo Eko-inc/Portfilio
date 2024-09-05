@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: wheat;
+}
+
+body {
+    background: url(img/time.webp);
+    background-size: cover;
+}
+
+header {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.062);
+    border-bottom: solid 2px wheat;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+a {
+    text-decoration: none;
+    background-color: rgba(245, 222, 179, 0.24);
+    padding: 5px;
+    border-radius: 20px;
+}
+
+header a {
+    margin-left: 20px;
+}
+
+a:hover {
+    background-color: rgba(245, 222, 179, 0.541);
+}
+
+.clock {
+    text-align: center;
+    margin-top: 170px;
+    font-size: 70px;
+    background-color: rgba(0, 0, 0, 0.753);
+    width: 30%;
+    margin-left: 35%;
+    padding: 15px 0;
+    border-radius: 25px;
+    border: solid 2px wheat;
+}
+
+footer {
+    bottom: 0;
+    position: fixed;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 100%;
+}
+
+p {
+    text-align: center;
+}
